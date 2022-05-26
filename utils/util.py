@@ -30,17 +30,7 @@ class AGREELoss(nn.Module):
         
         loss_function = (pos_preds - neg_preds - 1).clone().pow(2)
 
-        # nan_mask = torch.isnan(loss_function)
-        # loss = loss_function[~nan_mask].mean()
-        # assert ~torch.isnan(loss)
-        # print(loss.detach().cpu().numpy())
-
         loss = loss_function.mean()
-
-        # if torch.isnan(loss):
-        #     print(loss)
-        #     print(pos_preds)
-        #     print(neg_preds)
 
         return loss
 
@@ -50,7 +40,6 @@ class BPRLoss(nn.Module):
     
     def forward(self, pos_preds, neg_preds):
         # https://github.com/guoyang9/BPR-pytorch/blob/master/main.py
-        # loss = - (pos_preds - neg_preds).sigmoid().log().sum().clone()
         loss = - (pos_preds - neg_preds).sigmoid().log().mean().clone()
         return loss
 
