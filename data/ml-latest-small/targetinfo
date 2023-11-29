@@ -1,7 +1,0 @@
-2020-10-07 18:14:24.589: D:/Desktop/DSS/ruxia/AGREE_ruxia/Experiments/ml-1m/ml-latest-small/ratings\generate_data
-2020-10-07 18:14:24.589: The number of users: 610
-2020-10-07 18:14:24.590: The number of items: 9724
-2020-10-07 18:14:24.590: The number of ratings: 100836
-2020-10-07 18:14:24.600: Average actions of users: 165.30
-2020-10-07 18:14:24.600: Average actions of items: 10.37
-2020-10-07 18:14:24.600: The sparsity of the target dataset: 98.300032%
